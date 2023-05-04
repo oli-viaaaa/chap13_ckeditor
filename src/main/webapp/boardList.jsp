@@ -37,6 +37,7 @@
 			<col width="300"/>
 			<col width="80"/>
 			<col width="70"/>
+			<col width="200"/><!-- 게시물 등록일 -->
 		</colgroup>
 		<thead>
 			<tr>
@@ -44,6 +45,7 @@
 				<th>제목</th>
 				<th>작성자</th>
 				<th>조회수</th>
+				<th>등록일</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -69,14 +71,20 @@
 							<td align="center">
 								<c:out value="${board.hit}"/>
 							</td>
+							<td align="center">
+								<c:out value="${board.regdate}"/>
+							</td>
 						</tr>
 					</c:forEach>
+					<tr>
+						<td align="center" colspan="5">${page_navigator}</td>
+					</tr>
 				</c:otherwise>
 			</c:choose>
 		</tbody>
 	<tfoot>
 		<tr>
-			<td align="center" colspan="4">
+			<td align="center" colspan="5">
 				Copyright Ⓒ javalab Corp. All Rights Reserved
 			</td>
 		</tr>
